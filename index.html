@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vancomycin Dose Cost Calculator</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <form class="" action="index.html" method="post">
+
+  <h1>What is the cost of a 1 g Vancomycin dose?</h1>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"> Vancomycin cost: </label>
+    <div class="col-sm-2">
+      <input type="text" name="vancomycin" class="form-control" placeholder="$">
+  </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"> Diluent cost: </label>
+      <div class="col-sm-2">
+        <input type="text" name="diluent" class="form-control" placeholder="$">
+    </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label"> Ancillary cost: </label>
+        <div class="col-sm-2">
+          <input type="text" name="ancillary" class="form-control" placeholder="$">
+      </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"> % Waste: </label>
+          <div class="col-sm-2">
+            <input type="text" name="waste" class="form-control" placeholder="%">
+        </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label"> Pharmacy Tech: </label>
+            <div class="col-sm-2">
+              <input type="text" name="tHourly" class="form-control" placeholder="Hourly Rate"> <br>
+              <input type="text" name="tMinutes" class="form-control" placeholder="Minutes">
+          </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label"> Pharmacist: </label>
+              <div class="col-sm-2">
+                <input type="text" name="pHourly" class="form-control" placeholder="Hourly Rate"> <br>
+                <input type="text" name="pMinutes" class="form-control" placeholder="Minutes">
+            </div>
+              </div>
+
+
+        <button type="button" name="totalCost"class="btn btn-light">Total cost per dose</button>
+    </form>
+
+
+</body>
+
+</html>
