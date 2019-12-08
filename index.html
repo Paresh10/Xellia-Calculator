@@ -5,66 +5,78 @@
   <meta charset="utf-8">
   <title>Vancomycin Dose Cost Calculator</title>
 
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
-  <form class="" action="index.html" method="post">
 
-  <h1>What is the cost of a 1 g Vancomycin dose?</h1>
 
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label"> Vancomycin cost: </label>
-    <div class="col-sm-2">
-      <input type="text" name="vancomycin" class="form-control" placeholder="$">
-  </div>
+  <form name="calc Form" id="calcform" action="" onsubmit="returnCostPerDose(event)">
+
+    <h1>What is the cost of a 1 g Vancomycin dose?</h1>
+    <div class="heading col-lg-6">
+      <p class="main">xellia</p>
+      <p>Pharmaceuticals</p>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"> Vancomycin cost: </label>
+      <div class="col-sm-2">
+        <input type="text" id="vancomycinCost" name="vancomycin" class="form-control" placeholder="$">
+      </div>
     </div>
 
     <div class="form-group row">
       <label class="col-sm-2 col-form-label"> Diluent cost: </label>
       <div class="col-sm-2">
-        <input type="text" name="diluent" class="form-control" placeholder="$">
+        <input type="text" name="diluent" id="diluentCost" class="form-control" placeholder="$">
+      </div>
     </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"> Ancillary cost: </label>
+      <div class="col-sm-2">
+        <input type="text" name="ancillary" id="ancillaryCost" class="form-control" placeholder="$">
       </div>
+    </div>
 
-      <div class="form-group row">
-        <label class="col-sm-2 col-form-label"> Ancillary cost: </label>
-        <div class="col-sm-2">
-          <input type="text" name="ancillary" class="form-control" placeholder="$">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"> % Waste: </label>
+      <div class="col-sm-2">
+        <input type="text" name="waste" id="wastePercentage" class="form-control" placeholder="%">
       </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-2 col-form-label"> % Waste: </label>
-          <div class="col-sm-2">
-            <input type="text" name="waste" class="form-control" placeholder="%">
-        </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label"> Pharmacy Tech: </label>
-            <div class="col-sm-2">
-              <input type="text" name="tHourly" class="form-control" placeholder="Hourly Rate"> <br>
-              <input type="text" name="tMinutes" class="form-control" placeholder="Minutes">
-          </div>
-            </div>
-
-            <div class="form-group row">
-              <label class="col-sm-2 col-form-label"> Pharmacist: </label>
-              <div class="col-sm-2">
-                <input type="text" name="pHourly" class="form-control" placeholder="Hourly Rate"> <br>
-                <input type="text" name="pMinutes" class="form-control" placeholder="Minutes">
-            </div>
-              </div>
+    </div>
 
 
-        <button type="button" name="totalCost"class="btn btn-light">Total cost per dose</button>
-    </form>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"> Pharmacy Tech: </label>
+      <div class="col-sm-2">
+        <input type="text" name="tHourly" id="tHourlyCost" class="form-control" placeholder="Hourly Rate"> <br>
+        <input type="text" name="tMinutes" id="tMinutesCost" class=" tm form-control" placeholder="Time per dose (min)">
+      </div>
+    </div>
 
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"> Pharmacist: </label>
+      <div class="col-sm-2">
+        <input type="text" name="pHourly" id="pHourlyCost" class="form-control" placeholder="Hourly Rate"> <br>
+        <input type="text" name="pMinutes" id="pMinutesCost" class=" pm form-control" placeholder="Time per dose (min)">
+
+      </div>
+      <output class=" o btn btn-light" id="output"> $ <h6>Per 1 g Vancomycin Hydrochloride dose</h6> </output>
+      <button type="submit" class=" b btn btn-outline-light">See Result</button>
+    </div>
+
+  </form>
+
+  <script src="index.js" charset="utf-8"></script>
 
 </body>
 
